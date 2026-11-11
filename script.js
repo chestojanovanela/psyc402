@@ -260,6 +260,18 @@
         <span class="result-label">${escapeHtml(s.name)}</span></div>
       `).join('')}</div>
       <div class="score-total">Total recalled: ${total} of 18 words</div>
+      <section class="comparison-figure" aria-label="Visual comparison of recall scores by encoding strategy">
+        <div class="comparison-header"><h3>Compare your strategies</h3><span>WORDS RECALLED · OUT OF 6</span></div>
+        ${STRATEGIES.map(s => `
+          <div class="comparison-row" role="img" aria-label="${escapeHtml(s.name)}: ${session.scores[s.id]} out of 6 words recalled">
+            <span class="comparison-name">${escapeHtml(s.name)}</span>
+            <div class="comparison-track" aria-hidden="true"><div class="comparison-bar" style="width:${session.scores[s.id] / 6 * 100}%"></div></div>
+            <strong class="comparison-value">${session.scores[s.id]} / 6</strong>
+          </div>
+        `).join('')}
+        <div class="chart-axis" aria-hidden="true"><span>0</span><span>3</span><span>6</span></div>
+        <p class="comparison-caption">This chart compares your scores in this session. Results from one session alone cannot show which strategy works best for everyone.</p>
+      </section>
       <h3>Save your experiment data</h3>
       <p>Download both CSV files below. The summary contains one row for your session; the trial-level file contains one row for each studied word.</p>
       <div class="downloads">
