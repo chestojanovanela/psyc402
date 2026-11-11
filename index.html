@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f3">
+  <meta name="description" content="A browser-based psychology experiment comparing three memory encoding strategies.">
+  <title>How We Remember | Encoding Strategies Experiment</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" aria-label="Experiment information">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><span>MEMORY LAB <span class="brand-divider">/</span> PSYC 402</span></div>
+      <div class="header-tag">Encoding strategies study</div>
+    </header>
+
+    <main class="main-container">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> INTERACTIVE EXPERIMENT <span class="eyebrow-line"></span> 01 / 01</div>
+      <h1 id="page-title">How we <em>remember.</em></h1>
+      <p class="lead" id="page-subtitle">Explore how different ways of thinking about a word can influence what you remember later.</p>
+
+      <section class="experiment-panel" aria-labelledby="stage-title">
+        <div class="panel-topline">
+          <span id="stage-label">WELCOME</span>
+          <span id="step-counter">ABOUT 3 MINUTES</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Experiment progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="panel-inner" id="panel-content" aria-live="polite">
+          <div class="stage-icon" aria-hidden="true">◎</div>
+          <h2 id="stage-title">A small experiment in memory</h2>
+          <p>You’ll study 18 everyday words using three different memory strategies. Then you’ll complete a short counting task and try to recall as many words as you can.</p>
+          <div class="feature-grid">
+            <div class="feature"><span class="feature-value">03</span><span class="feature-label">Study rounds</span></div>
+            <div class="feature"><span class="feature-value">18</span><span class="feature-label">Words total</span></div>
+            <div class="feature"><span class="feature-value">30s</span><span class="feature-label">Counting task</span></div>
+          </div>
+          <p class="fine-print">Please complete the experiment without taking notes or using another device. No personal information is requested or uploaded.</p>
+          <div class="action-row"><button class="primary-button" id="start-button" type="button">Begin experiment <span aria-hidden="true">→</span></button></div>
+        </div>
+      </section>
+      <div class="below-panel"><span>DESIGNED FOR LEARNING, NOT DIAGNOSIS</span><span>DATA STAYS IN YOUR BROWSER <span aria-hidden="true">↗</span></span></div>
+    </main>
+    <footer class="site-footer">PSYC 402 · Browser-based practice experiment</footer>
+  </div>
+</body>
+</html>
